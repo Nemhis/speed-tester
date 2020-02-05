@@ -1,3 +1,5 @@
+'use strict';
+
 const {ExitCode} = require(`../constants`);
 
 const message = `

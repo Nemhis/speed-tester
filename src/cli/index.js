@@ -1,3 +1,5 @@
+'use strict';
+
 const version = require(`./version`);
 const help = require(`./help`);
 const test = require(`./test`);
