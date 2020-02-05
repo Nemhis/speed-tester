@@ -15,7 +15,7 @@ if (userArguments.length === 0 || !Cli[userCommand]) {
   try {
     Cli[DEFAULT_COMMAND].run();
   } catch (error) {
-    // console.log(error.getMessage())
+    console.log(error.getMessage())
   }
 }
 
