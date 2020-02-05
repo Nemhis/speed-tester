@@ -3,13 +3,16 @@
 const program = require(`commander`);
 
 program
-  .requiredOption(``, `--url`, `Remove sauce`)
-  .option(`--cheese <flavour>`, `cheese flavour`, `mozzarella`)
-  .option(`--no-cheese`, `plain with no cheese`);
+  .requiredOption(`--url <url>`, `Page url for test`)
+  .option(`--count <count>`, `Count test iteration`, 1);
+
 
 module.exports = {
   name: `--test`,
   run(args) {
-    console.info(`hello from test`, args);
+      program.parse(args);
+      const {url, count} = program.opts();
+
+      console.log(program.opts());
   }
 };
