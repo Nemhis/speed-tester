@@ -17,8 +17,9 @@ if (userArguments.length === 0 || !Cli[userCommand]) {
   } catch (error) {
     // console.log(error.getMessage())
   }
-
-  process.exit(ExitCode.success);
 }
 
-Cli[userCommand].run(userArguments.slice(1));
+const commandArgs = [...process.argv];
+commandArgs.splice(USER_ARGV_INDEX, 1);
+
+Cli[userCommand].run(commandArgs);
